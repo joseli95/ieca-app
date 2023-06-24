@@ -28,7 +28,7 @@ function App() {
               Controlled component
             </Link>
             <Link to={"/contador"} className={"font-bold text-2xl text-blue-700"}>
-              Controlled component
+              Custom hook
             </Link>
           </div>
 
