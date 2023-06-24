@@ -1,20 +1,20 @@
-import { useState } from 'react'
+import { useState } from "react"
 
 const ControlledComponent = () => {
   const [inputValue, setInputValue] = useState("")
-  const [error, setError] = useState('')
+  const [error, setError] = useState("")
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value)
-  }
+  };
 
   const print = () => {
     alert(inputValue)
-  }
+  };
 
   const clear = () => {
     setInputValue("")
-  }
+  };
 
   const validate = () => {
     if (inputValue.length > 10) {
@@ -23,8 +23,7 @@ const ControlledComponent = () => {
       alert("El valor es correcto: " + inputValue);
       setError("");
     }
-  }
-
+  };
   return (
     <div className="bg-gray-200 flex-1 w-full">
       <div className="flex gap-4">
@@ -36,7 +35,7 @@ const ControlledComponent = () => {
       {!!error && <span className="text-red-500 text-sm">{error}</span>}
       <div className="flex gap-4">El valor del input es: {inputValue}</div>
     </div>
-  )
-}
+  );
+};
 
 export default ControlledComponent
