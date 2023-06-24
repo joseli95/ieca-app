@@ -5,6 +5,7 @@ import HelloWorld from './components/HelloWorld.jsx'
 import SecondPage from './components/SecondPage.jsx'
 import RefComponent from './components/RefComponent.jsx'
 import ControlledComponent from './components/ControlledComponent.jsx'
+import CounterComponent from './components/CounterComponent.jsx'
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
             <Link to={"/controlled"} className={"font-bold text-2xl text-blue-700"}>
               Controlled component
             </Link>
+            <Link to={"/contador"} className={"font-bold text-2xl text-blue-700"}>
+              Controlled component
+            </Link>
           </div>
 
 
@@ -34,6 +38,7 @@ function App() {
             <Route path={"/second"} exact element={<SecondPage/>}/>
             <Route path={"/ref"} exact element={<RefComponent/>}/>
             <Route path={"/controlled"} exact element={<ControlledComponent/>}/>
+            <Route path={"/contador"} exact element={<CounterComponent/>}/>
           </Routes>
 
         </main>
