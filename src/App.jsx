@@ -6,6 +6,7 @@ import SecondPage from './components/SecondPage.jsx'
 import RefComponent from './components/RefComponent.jsx'
 import ControlledComponent from './components/ControlledComponent.jsx'
 import CounterComponent from './components/CounterComponent.jsx'
+import TodoList from './components/TodoList.jsx'
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
             <Link to={"/contador"} className={"font-bold text-2xl text-blue-700"}>
               Custom hook
             </Link>
+            <Link to={"/todo"} className={"font-bold text-2xl text-blue-700"}>
+              Lista Todo
+            </Link>
           </div>
 
 
@@ -39,6 +43,7 @@ function App() {
             <Route path={"/ref"} exact element={<RefComponent/>}/>
             <Route path={"/controlled"} exact element={<ControlledComponent/>}/>
             <Route path={"/contador"} exact element={<CounterComponent/>}/>
+            <Route path={"/todo"} exact element={<TodoList/>}/>
           </Routes>
 
         </main>
