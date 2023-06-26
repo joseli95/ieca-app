@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useState } from "react"
 
 const useTodo = () => {
   const [list, setList] = useState([])
 
   const addTodo = (todo) => {
-    setList([...list, {text: todo, done: false}])
+    setList([...list, { text: todo, done: false }])
   }
 
   const removeTodo = (index) => {
@@ -12,13 +12,13 @@ const useTodo = () => {
   }
 
   const updateTodo = (index, checked) => {
+    console.log(checked)
     setList(
       list.map((todo, i) => {
         if (i === index) {
-          return {...todo, done: checked}
+          return { ...todo, done: checked === "on" }
         }
-
-        return todo
+        return todo;
       })
     )
   }
@@ -27,7 +27,7 @@ const useTodo = () => {
     list,
     addTodo,
     removeTodo,
-    updateTodo
+    updateTodo,
   }
 }
 
