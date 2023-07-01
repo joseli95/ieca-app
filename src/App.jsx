@@ -8,6 +8,8 @@ import ControlledComponent from './components/ControlledComponent.jsx'
 import CounterComponent from './components/CounterComponent.jsx'
 import TodoList from './components/TodoList.jsx'
 import { useState } from 'react'
+import ReducerComponent from './components/ReducerComponent.jsx'
+import ProductsComponent from './components/ProductsComponent.jsx'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -53,6 +55,12 @@ function App() {
               <Link to={"/todo"} className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
                 Lista Todo
               </Link>
+              <Link to={"/reducer"} className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                 Reducer
+              </Link>
+              <Link to={"/products"} className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                 Productos
+              </Link>
             </div>
           </div>
         </nav>
@@ -64,6 +72,8 @@ function App() {
             <Route path={"/controlled"} exact element={<ControlledComponent/>}/>
             <Route path={"/contador"} exact element={<CounterComponent/>}/>
             <Route path={"/todo"} exact element={<TodoList/>}/>
+            <Route path={"/reducer"} exact element={<ReducerComponent/>}/>
+            <Route path={"/products"} exact element={<ProductsComponent/>}/>
           </Routes>
         </main>
       </BrowserRouter>
